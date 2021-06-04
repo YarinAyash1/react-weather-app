@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: $clr3;
+  background-color: $clr2;
+  margin: 0;
+  font-size: 16px;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: normal;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  // &:hover {
+    // text-decoration: underline;
+  // }
+}
+
+button {
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+input {
+  outline: none;
+  font-family: inherit;
+  text-align: inherit;
+}
+
+// MAC like scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}

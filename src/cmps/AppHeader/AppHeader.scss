@@ -1,0 +1,17 @@
+.app-header{
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 1rem;
+    &-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-logo{
+            flex-grow: 1;
+        }
+    }
+    a{
+        margin-right: 20px;
+        text-decoration: none;
+    }
+}
