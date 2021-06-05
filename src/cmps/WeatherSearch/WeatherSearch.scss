@@ -1,4 +1,8 @@
 .weather-search{
     color: #6b6a8a;
     margin-bottom: 15px !important;
+    align-items: center;
+    &-input{
+      padding: .3rem;
+    }
 }
