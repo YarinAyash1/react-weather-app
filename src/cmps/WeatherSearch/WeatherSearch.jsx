@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { weatherService } from '../../services/weatherService';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './WeatherSearch.scss';
 
@@ -11,11 +11,10 @@ export class WeatherSearch extends Component {
 
   onChangeHandler = (ev) => {
     console.log(ev.target)
-    var letters = /^[A-Za-z]+$/;
+    var letters = /^[a-zA-Z\s]*$/;
     if(!ev.target.value.match(letters)){
       toast.warn("It must be only English letters only");
       return;
-
     } else {
       console.log('search,', ev.target.value);
       weatherService.getLocationAutoComplete(ev.target.value);
