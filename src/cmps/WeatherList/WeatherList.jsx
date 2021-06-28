@@ -3,11 +3,11 @@ import { WeatherPreview } from '../WeatherPreview/WeatherPreview';
 import './WeatherList.scss';
 
 export function WeatherList({ weathers }) {
-    return (
-        <ul className="feature-list clean-list">
-            {weathers.map((weather) => (
-                <WeatherPreview weather={weather} />
-            ))}
-        </ul>
-    );
+  return (
+    <ul className="feature-list clean-list">
+      {weathers.map((weather, index) => (
+        <WeatherPreview key={index} weather={weather} />
+      ))}
+    </ul>
+  );
 }
