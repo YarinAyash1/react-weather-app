@@ -21,3 +21,10 @@ export function loadCity() {
     dispatch({ type: 'SET_CITY', city });
   }
 }
+
+export function loadFavorites() {
+  return async dispatch => {
+    const favorites = await weatherService.getFavorites();
+    dispatch({ type: 'SET_FAVORITES', favorites });
+  }
+}

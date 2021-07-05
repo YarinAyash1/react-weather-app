@@ -1,7 +1,8 @@
 const INITIAL_STATE = {
   weather: [],
   currentWeather: null,
-  city: null
+  city: null,
+  favorites: []
 }
 
 export function weatherReducer(state = INITIAL_STATE, action) {
@@ -20,6 +21,11 @@ export function weatherReducer(state = INITIAL_STATE, action) {
       return {
         ...state,
         city: action.city
+      };
+    case 'SET_FAVORITES':
+      return {
+        ...state,
+        favorites: action.favorites
       };
     default:
       return state;

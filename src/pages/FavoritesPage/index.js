@@ -1,1 +1,1 @@
-export { default } from './FavoritesPage.jsx'
+export { FavoritesPage } from './FavoritesPage.jsx'
