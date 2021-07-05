@@ -1,6 +1,6 @@
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { HomePage } from './pages/HomePage/';
-import FavoritesPage from './pages/FavoritesPage/';
+import { FavoritesPage } from './pages/FavoritesPage/';
 import { AppHeader } from './cmps/AppHeader/';
 import './assets/styles/global.scss';
 
