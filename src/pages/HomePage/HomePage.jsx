@@ -22,17 +22,17 @@ export function HomePage(props) {
     dispatch(loadCurrentWeather());
   }, []);
 
-  const handleClick = (favoriteToAdd) => {
+  const onAddtoFavoritesHandler = (favoriteToAdd) => {
     weatherService.addToFavorites(favoriteToAdd);
-    toast.success("Added succsesfully to favorites!");
+    toast.success('Added succsesfully to favorites!');
   }
 
   return (
     <div className="home-page container">
       {city && <CityPreview city={city}/>}
       <CurrentWeather currentWeather={currentWeather} />
-      <button className="favoriters-btn" onClick={() => handleClick({...props})}>Add to favorites &#x2764;</button>
-      {/* <WeatherSearch /> */}
+      <button className="favoriters-btn" onClick={() => onAddtoFavoritesHandler(city)}>Add to favorites &#x2764;</button>
+      <WeatherSearch />
       {weather && <WeatherList weathers={weather} />}
       <ToastContainer />
     </div>
