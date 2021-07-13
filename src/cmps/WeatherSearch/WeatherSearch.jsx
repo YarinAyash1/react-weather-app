@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { weatherService } from '../../services/weatherService';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
