@@ -1,29 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { weatherIconConverter } from '../../services/utilService';
 import './CurrentWeather.scss';
 
 export function CurrentWeather({ currentWeather }) {
   return (
-    <div className="current-weather">
+    <>
       {currentWeather && (
-          <>
-              <p>{currentWeather.WeatherText}</p>
-              <span>{currentWeather.Temperature.Metric.Value} &#8451;</span>
-              <img
-                  src={`https://developer.accuweather.com/sites/default/files/0${currentWeather.WeatherIcon}-s.png`}
-              />
-          </>
+        <div className="current-weather">
+          <img className="current-weather-icon"
+            src={`https://developer.accuweather.com/sites/default/files/${weatherIconConverter(
+              currentWeather.WeatherIcon
+            )}-s.png`}
+          />
+          <p>{currentWeather.WeatherText}</p>
+          <span className="current-weather-temperature">{currentWeather.Temperature.Metric.Value} &#8451;</span>
+        </div>
       )}
-
-          {/* {currentWeather && currentWeather.map((curr)  => 
-              <>{curr.WeatherText} 
-                  <img
-                  src={`https://developer.accuweather.com/sites/default/files/0${curr.WeatherIcon}-s.png`}
-                />
-                {curr.Temperature.Metric.Value}
-                {curr.Temperature.Metric.Unit}&#176;
-
-              </>
-          )} */}
-      </div>
+    </>
   );
 }
